@@ -14,6 +14,6 @@ export const config = {
     dir: {
         input: "views",
         layouts: "_layouts",
-        output: "dist"
+        output: "/var/www/80fknet"
     }
 };
