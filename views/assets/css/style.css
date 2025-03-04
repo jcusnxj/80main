@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100dvh;
+    font-size: 1.7rem;
+}
+
+main {
+    max-width: 740px;
+    margin: 0 auto;
+    padding: 2rem;
+}
