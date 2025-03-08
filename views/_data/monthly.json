@@ -1,0 +1,54 @@
+[
+  {
+    "month": "2024-12-01",
+    "eomonth": "2024-12-31",
+    "distance": "22.5",
+    "duration": "02:35:45",
+    "pace": "06:56",
+    "avghr": "154",
+    "ascent": "231",
+    "cadence": "160",
+    "id": "20241231",
+    "weight": "84.3",
+    "bodyfat": "31.9"
+  },
+  {
+    "month": "2025-01-01",
+    "eomonth": "2025-01-31",
+    "distance": "34.7",
+    "duration": "04:01:05",
+    "pace": "06:57",
+    "avghr": "144",
+    "ascent": "286",
+    "cadence": "160",
+    "id": "20250131",
+    "weight": "83.4",
+    "bodyfat": "31.3"
+  },
+  {
+    "month": "2025-02-01",
+    "eomonth": "2025-02-28",
+    "distance": "60.0",
+    "duration": "06:46:18",
+    "pace": "06:47",
+    "avghr": "147",
+    "ascent": "615",
+    "cadence": "160",
+    "id": "20250226",
+    "weight": "81.7",
+    "bodyfat": "30.3"
+  },
+  {
+    "month": "2025-03-01",
+    "eomonth": "2025-03-31",
+    "distance": "18.3",
+    "duration": "02:01:31",
+    "pace": "06:38",
+    "avghr": "148",
+    "ascent": "164",
+    "cadence": "161",
+    "id": "",
+    "weight": "81.7",
+    "bodyfat": "30.4"
+  }
+]

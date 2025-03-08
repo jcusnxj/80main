@@ -1,16 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="/assets/css/style.css" rel="stylesheet"> 
+    <link href="/assets/css/style.css" rel="stylesheet">
     <title>{{ title }}</title>
 </head>
+
 <body>
-    <main>
-        {% block content %}
-        {{ content | safe }}
-        {% endblock %}    
-      </main>
+    <!-- HEADER -->
+    <header class="site-header">
+        <div class="wrapper">
+            <a href="/">Home</a> |
+            <a href="/log">Log</a> |
+            <a href="/notes">Notes</a> |
+            <a href="/about">About</a> 
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+        <div class="wrapper">
+            {% block content %}
+            {{ content | safe }}
+            {% endblock %}
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="wrapper">
+            Fuck it, dude.
+        </div>
+    </footer>
 </body>
+
 </html>

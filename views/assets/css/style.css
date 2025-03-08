@@ -1,6 +1,28 @@
+/* CSS RESET */
+
+/* Box sizing */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Remove default margins */
 * {
     margin: 0;
 }
+
+
+/* VARIABLES */
+:root {
+    --body-color: #f4f0e8;
+    --text-color: #373636;
+    --link-color: #0995c4;
+    --other-color: #8395a6;
+}
+
+
+/* GLOBAL */
 
 html {
     font-size: 62.5%;
@@ -9,15 +31,88 @@ html {
 body {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     min-height: 100dvh;
-    font-size: 1.8rem;
-    background-color: #f4f0e8;
+    overflow-y: scroll;
+    font-size: 1.7rem;
+    line-height: 1.5;
+    background-color: var(--body-color);
+    color: var(--text-color);
+    font-family: system-ui, -apple-system, sans-serif;
 }
 
-main {
+a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+/* LAYOUT */
+.wrapper {
     max-width: 740px;
     margin: 0 auto;
-    padding: 2rem;
+    padding: 0 1.5rem;
+}
+
+/* SITE HEADER */
+.site-header .wrapper {
+    display: flex;
+    align-items: baseline;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    gap: 0.7rem;
+    color: var(--other-color);
+}
+
+.site-header .wrapper a {
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-weight: 550;
+}
+
+/* MAIN CONTENT */
+.main-content {
+    flex: 1;
+}
+
+/* FOOTER */
+footer .wrapper {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    gap: 1rem;
+}
+
+/* TABLES */
+.table-overview {
+    width: 95%;
+    text-align: center;
+    border-collapse: collapse;
+    margin: 0 auto;
+    font-size: 1.5rem;
+    color: var(--text-color);
+}
+
+.unit-cell,
+.data-cell {
+    border-bottom: 1px solid #c3c2c2;
+}
+
+.unit-cell {
+    font-style: italic;
+    color: var(--other-color);
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+    .hidden-stuff {
+        display: none;
+    }
+
+    .pagination {
+        margin: 2rem 0;
+    }
+
 }
