@@ -1,0 +1,12 @@
+{% extends "views/_layouts/base.njk" %}
+
+{% block content %}
+
+<article class="post-full">
+    <div class="post-text">
+        {{ content | safe }}
+    </div>
+
+    {% include "partials/pagination.njk" %}
+</article>
+{% endblock %}

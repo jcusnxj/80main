@@ -1,0 +1,14 @@
+{% set previousPost = collections.log | getPreviousCollectionItem(page) %}
+{% set nextPost = collections.log | getNextCollectionItem(page) %}
+
+<section class="pagination">
+  {% if previousPost %}
+  <a href="{{ previousPost.url }}">Previous</a>
+  {% else %}
+  <span></span> <!-- Placeholder for spacing -->
+  {% endif %}
+
+  {% if nextPost %}
+  <a href="{{ nextPost.url }}">Next</a>
+  {% endif %}
+</section>
