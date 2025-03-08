@@ -91,7 +91,7 @@ footer .wrapper {
     text-align: center;
     border-collapse: collapse;
     margin: 0 auto;
-    font-size: 1.5rem;
+    font-size: smaller;
     color: var(--text-color);
 }
 
