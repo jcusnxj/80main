@@ -5,9 +5,9 @@ title: Package management
 - [Ubuntu Server Documentation](https://documentation.ubuntu.com/server/tutorial/managing-software/)
 
 ### Notes
-- __apt__ - Advanced Packaging Tool
-- __dpkg__ - Debian Package Manager
-- __sudo__ - grants regular users temporary (per command) admin privileges to make system changes
+- `apt` - Advanced Packaging Tool
+- `dpkg` - Debian Package Manager
+- `sudo` - grants regular users temporary (per command) admin privileges to make system changes
 
 ### Update (database)
 ```bash

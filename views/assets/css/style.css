@@ -19,6 +19,7 @@
     --text-color: #373636;
     --link-color: #0995c4;
     --other-color: #8395a6;
+    --headings-color: #60747d;
 }
 
 
@@ -33,7 +34,7 @@ body {
     flex-direction: column;
     min-height: 100dvh;
     overflow-y: scroll;
-    font-size: 1.7rem;
+    font-size: 1.65rem;
     line-height: 1.5;
     background-color: var(--body-color);
     color: var(--text-color);
@@ -48,7 +49,7 @@ a {
 h3 {
     font-size: 1.7rem;
     font-weight: 550;
-    color: var(--other-color);
+    color: var(--headings-color);
 }
 
 .note ul {
@@ -101,8 +102,12 @@ footer .wrapper {
     text-align: center;
     border-collapse: collapse;
     margin: 0 auto;
-    font-size: smaller;
+   font-size: smaller;
     color: var(--text-color);
+}
+
+.header-row {
+    color: var(--headings-color)
 }
 
 .unit-cell,
