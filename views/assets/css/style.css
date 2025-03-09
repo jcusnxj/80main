@@ -45,6 +45,16 @@ a {
     text-decoration: none;
 }
 
+h3 {
+    font-size: 1.7rem;
+    font-weight: 550;
+    color: var(--other-color);
+}
+
+.note ul {
+    margin-bottom: 1rem;
+}
+
 /* LAYOUT */
 .wrapper {
     max-width: 740px;

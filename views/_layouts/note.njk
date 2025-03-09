@@ -2,11 +2,8 @@
 
 {% block content %}
 
-<article class="log">
-
+<article class="note">
     {{ content | safe }}
-    {% include "partials/pagination.njk" %}
-
 </article>
 
 {% endblock %}

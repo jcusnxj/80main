@@ -1,0 +1,43 @@
+{% extends "views/_layouts/base.njk" %}
+
+{% block content %}
+{{ content | safe }}
+
+<table class="table-overview">
+    <thead>
+      <tr class="header-row">
+        <th>Month</th>
+        <th>Distance</th>
+        <th>Pace</th>
+        <th>Avg HR</th>
+        <th class="hidden-stuff">Ascent</th>
+        <th class="hidden-stuff">Duration</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="unit-row">
+        <td class="unit-cell">mm/yy</td>
+        <td class="unit-cell">km</td>
+        <td class="unit-cell">min/km</td>
+        <td class="unit-cell">bpm</td>
+        <td class="unit-cell hidden-stuff">m</td>
+        <td class="unit-cell hidden-stuff">hh:mm:ss</td>
+      </tr>
+      {% for item in monthly | reverse %}
+      <tr class="data-row">
+        {% if item.id %}
+        <td class="data-cell"><a href="/log/{{ item.id }}/">{{ item.month | dateString("MM/yy") }}</a></td>
+        {% else %}
+        <td class="data-cell">{{ item.month | dateString("MM/yy") }}</td>
+        {% endif %}
+        <td class="data-cell">{{ item.distance }}</td>
+        <td class="data-cell">{{ item.pace }}</td>
+        <td class="data-cell">{{ item.avghr }}</td>
+        <td class="data-cell hidden-stuff">{{ item.ascent }}</td>
+        <td class="data-cell hidden-stuff">{{ item.duration }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+{% endblock %}

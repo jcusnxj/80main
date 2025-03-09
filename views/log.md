@@ -1,4 +1,4 @@
 ---
 title: Running log
-layout: log
+layout: logmain
 ---
