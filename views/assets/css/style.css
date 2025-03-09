@@ -89,11 +89,14 @@ h3 {
 /* FOOTER */
 footer .wrapper {
     display: flex;
-    align-items: baseline;
+    align-items: center;
     justify-content: center;
     padding-top: 3rem;
     padding-bottom: 3rem;
-    gap: 1rem;
+    font-size: smaller;
+    color: var(--other-color);
+    flex-direction: column;
+
 }
 
 /* TABLES */

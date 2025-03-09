@@ -1,5 +1,8 @@
 ---
 title: Package management
+eleventyNavigation:
+    key: Package management
+    parent: Ubuntu Server
 ---
 ### Sources
 - [Ubuntu Server Documentation](https://documentation.ubuntu.com/server/tutorial/managing-software/)
