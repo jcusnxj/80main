@@ -38,6 +38,10 @@ echo '<h1>Hey there!</h1>' > /srv/my-site/html/index.html
 sudo ln -s /etc/nginx/sites-available/mysite.conf /etc/nginx/sites-enabled/
 # your website's configuration would be disabled without symlink
 ```
+### Remove symlink for nginx default configuration (optional)
+```bash
+sudo rm /etc/nginx/sites-enabled/default
+```
 ### Test nginx configuration
 ```bash
 sudo nginx -t

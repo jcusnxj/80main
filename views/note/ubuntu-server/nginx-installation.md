@@ -24,7 +24,7 @@ sudo systemctl status nginx
 - symlinks are stored at `/etc/nginx/sites-enabled/`. If symlink does not exist, nginx will ignore a website's configuration.
 - You can disable/enable any website by deleting/creating symlink to its configuration file:
 ```bash
-sudo rm /etc/nginx/sites-available/default
+sudo rm /etc/nginx/sites-enabled/default
 # disables nginx default homepage by deleting symlink to its configuration
 
 sudo ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/
@@ -55,4 +55,8 @@ sudo systemctl disable nginx
 sudo systemctl disable nginx
 # enables nginx from automatic start at boot time
 ```
-
+### Reinstall nginx
+```bash
+sudo apt-get install --reinstall nginx
+# restores the default configuration files without affecting other configurations.
+```
