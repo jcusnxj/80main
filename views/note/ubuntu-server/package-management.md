@@ -73,5 +73,25 @@ dpkg --verify apache2
 # verifies the checksums of the files on our system against those 
 # held in the package index for the given package and finds any mismatch
 ```
+### Remove package
+```bash
+sudo apt remove nginx
+# removes the package but not other dependencies the package needed
+# does not remove conffiles
+```
+### Remove package including conffiles
+```bash
+sudo apt remove --purge nginx
+# removes the package and conffiles
+```
+### Autoremove dependencies
+```bash
+sudo apt autoremove
+# removes packages flagged for automatic removal
+# the original reason for the package to be installed no longer exists
+# you can unflag package from automatic removal by running manual install
+```
+
+
 
 

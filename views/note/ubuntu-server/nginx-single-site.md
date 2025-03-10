@@ -58,5 +58,5 @@ sudo systemctl reload nginx
 - Make sure you use http in the address (not https) as your configuration supports unsecured connection only.
 ### Next steps
 - SSL and HTTPS
-- Build and deploy 11ty to your website
+- [Build and deploy 11ty](/note/build-deploy-11ty/) 
 
