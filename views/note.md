@@ -10,4 +10,5 @@ eleventyNavigation:
 - [nginx single site configuration](nginx-single-site)
 - [Build & deploy 11ty](/note/build-deploy-11ty)
 - [GoToSocial installation](/note/gotosocial)
+- [SSL and HTTPS](/note/ssl-https)
 

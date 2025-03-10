@@ -57,6 +57,6 @@ sudo systemctl reload nginx
 - Navigate to your website in browser: `http://my-site.org` or `http://www.my-site.org`. You should see your website with _"Hey there!"_ message.
 - Make sure you use http in the address (not https) as your configuration supports unsecured connection only.
 ### Next steps
-- SSL and HTTPS
+- [SSL and HTTPS](/note/ssl-https)
 - [Build and deploy 11ty](/note/build-deploy-11ty/) 
 
