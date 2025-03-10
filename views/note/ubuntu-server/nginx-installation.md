@@ -33,7 +33,7 @@ sudo ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/
 ### Test new nginx configuration
 ```bash
 sudo nginx -t
-# always test new configuration before running reload/restart
+# always test a new configuration before running reload/restart
 ```
 ### Reload nginx
 ```bash
