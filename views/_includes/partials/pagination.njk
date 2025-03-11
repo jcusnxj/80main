@@ -1,14 +1,14 @@
-{% set previousPost = collections.log | getPreviousCollectionItem(page) %}
-{% set nextPost = collections.log | getNextCollectionItem(page) %}
+{% set previousPost = collections["log_" + lang ] | getPreviousCollectionItem(page) %}
+{% set nextPost = collections["log_" + lang ] | getNextCollectionItem(page) %}
 
 <section class="pagination">
   {% if previousPost %}
-  <a href="{{ previousPost.url }}">Previous</a>
+  <a href="{{ previousPost.url }}">{{ languages[lang].previousPostText }}</a>
   {% else %}
   <span></span> <!-- Placeholder for spacing -->
   {% endif %}
 
   {% if nextPost %}
-  <a href="{{ nextPost.url }}">Next</a>
+  <a href="{{ nextPost.url }}">{{ languages[lang].nextPostText }}</a>
   {% endif %}
 </section>

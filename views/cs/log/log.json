@@ -1,0 +1,5 @@
+{
+    "layout": "logpost",
+    "tags": ["log_cs"],
+    "permalink": "/{{ lang }}/log/{{ page.fileSlug }}/"
+}

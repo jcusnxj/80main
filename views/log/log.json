@@ -1,5 +1,0 @@
-{
-    "layout": "log",
-    "tags": ["log"],
-    "permalink": "/log/{{ page.fileSlug }}/"
-}

@@ -1,0 +1,4 @@
+{% set navPages = collections["page_" + lang] %}
+{% for item in navPages %}
+<a href="{{ item.url }}">{{ item.data.title }}</a>
+{% endfor %}

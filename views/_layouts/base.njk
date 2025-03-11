@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ lang }}">
 
 <head>
     <meta charset="UTF-8">
@@ -13,8 +13,7 @@
     <!-- HEADER -->
     <header class="site-header">
         <div class="wrapper">
-            <a href="/">Home</a> |
-            <a href="/log">Log</a> 
+            {% include "partials/mainnavigation.njk" %}
         </div>
     </header>
 

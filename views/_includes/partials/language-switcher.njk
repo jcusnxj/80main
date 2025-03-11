@@ -1,0 +1,21 @@
+{# loop though site.languages #}
+{% for lgg in site.languages %}
+
+    {# set translatedUrl to the homepage of that language by default #}
+    {% set translatedUrl = "/" + lgg.code + "/" %}
+
+    {# loop through all the content of the site #}
+    {% for item in collections.all %}
+
+        {# for each item in the loop, check if
+        - its translationKey matches the current item translationKey
+        - its lang matches the code of the language we are looping through #}
+        {% if item.data.translationKey == translationKey and item.data.lang == lgg.code %}
+        {% set translatedUrl = item.url %}
+        {% endif %}
+        
+    {% endfor %}
+
+<a href="{{ translatedUrl }}">{{ lgg.label }}</a>
+
+{% endfor %}

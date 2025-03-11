@@ -6,12 +6,12 @@
 <table class="table-overview">
     <thead>
       <tr class="header-row">
-        <th>Month</th>
-        <th>Distance</th>
-        <th>Pace</th>
+        <th>{{ dictionary[lang].month }}</th>
+        <th>{{ dictionary[lang].distance }}</th>
+        <th>{{ dictionary[lang].pace }}</th>
         <th>Avg HR</th>
-        <th class="hidden-stuff">Ascent</th>
-        <th class="hidden-stuff">Duration</th>
+        <th class="hidden-stuff">{{ dictionary[lang].ascent }}</th>
+        <th class="hidden-stuff">{{ dictionary[lang].duration }}</th>
       </tr>
     </thead>
     <tbody>
@@ -26,7 +26,12 @@
       {% for item in monthly | reverse %}
       <tr class="data-row">
         {% if item.id %}
-        <td class="data-cell"><a href="/log/{{ item.id }}/">{{ item.month | dateString("MM/yy") }}</a></td>
+        <td class="data-cell">
+          {% if lang == "en" %}
+          <a href="/{{ lang }}/log/20{{ item.id }}/">{{ item.month | dateString("MM/yy") }}</a></td>
+          {% else %}
+          <a href="/{{ lang }}/log/{{ item.id }}/">{{ item.month | dateString("MM/yy") }}</a></td>
+          {% endif %}
         {% else %}
         <td class="data-cell">{{ item.month | dateString("MM/yy") }}</td>
         {% endif %}
