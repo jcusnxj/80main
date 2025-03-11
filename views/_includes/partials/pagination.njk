@@ -3,12 +3,12 @@
 
 <section class="pagination">
   {% if previousPost %}
-  <a href="{{ previousPost.url }}">{{ languages[lang].previousPostText }}</a>
+  <a href="{{ previousPost.url }}">{{ dictionary[lang].previousPostText }}</a>
   {% else %}
   <span></span> <!-- Placeholder for spacing -->
   {% endif %}
 
   {% if nextPost %}
-  <a href="{{ nextPost.url }}">{{ languages[lang].nextPostText }}</a>
+  <a href="{{ nextPost.url }}">{{ dictionary[lang].nextPostText }}</a>
   {% endif %}
 </section>
