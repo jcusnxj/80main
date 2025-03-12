@@ -66,16 +66,20 @@ a {
 /* SITE HEADER */
 .site-header .wrapper {
     display: flex;
-    align-items: baseline;
     justify-content: flex-end;
-    flex-wrap: wrap;
     padding-top: 3rem;
-    padding-bottom: 3rem;
-    gap: 1rem;
+    padding-bottom: 1rem;
+    
 }
 
 .site-header .wrapper a {
-    font-weight: 550;
+    font-weight: 400;
+}
+
+.breadcrumb .wrapper {
+    display: flex;
+    justify-content: flex-start;
+    padding-bottom: 1rem;
 }
 
 /* MAIN CONTENT */

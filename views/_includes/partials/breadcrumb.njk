@@ -3,7 +3,7 @@
 {% for crumb in navPages %}
 {% if loop.first %}
 
-<nav class="breadcrumb">
+<nav>
 
 {% endif %}
 {% if not loop.last %}
@@ -13,7 +13,7 @@
 {% else %}
 {% if page.url == "/" + lang + "/" %}
 
-<div class="crumb-last">Fuck it, dude.</div>
+<div class="crumb-last">Fuck it, dude. Let's go running.</div>
 
 {% else %}
 
