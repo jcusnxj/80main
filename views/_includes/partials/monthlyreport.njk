@@ -1,0 +1,46 @@
+<table class="table-overview">
+    <thead>
+      <tr class="header-row">
+        <th>{{ dictionary[lang].date }}</th>
+        <th>{{ dictionary[lang].distance }}</th>
+        <th>{{ dictionary[lang].pace }}</th>
+        <th>Avg HR</th>
+        <th class="hidden-stuff">{{ dictionary[lang].ascent }}</th>
+        <th class="hidden-stuff">{{ dictionary[lang].duration }}</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="unit-row">
+        <td class="unit-cell">dd/mm</td>
+        <td class="unit-cell">km</td>
+        <td class="unit-cell">min/km</td>
+        <td class="unit-cell">bpm</td>
+        <td class="unit-cell hidden-stuff">m</td>
+        <td class="unit-cell hidden-stuff">hh:mm:ss</td>
+      </tr>
+      {% set filteredRuns = workout | filterByDateRange(startDate, endDate) %}
+      {% set countRuns = 0 %}
+      {% for item in filteredRuns | reverse %}
+      <tr class="data-row">
+        <td class="data-cell">{{ item.date | dateString("dd/MM") }}</td>
+        <td class="data-cell">{{ item.distance }}</td>
+        <td class="data-cell">{{ item.pace }}</td>
+        <td class="data-cell">{{ item.avghr }}</td>
+        <td class="data-cell hidden-stuff">{{ item.ascent }}</td>
+        <td class="data-cell hidden-stuff">{{ item.duration }}</td>
+      </tr>
+      {% set countRuns = countRuns + 1 %}
+      {% endfor %}
+      {% set selectedMonth = monthly | findAttribute("month", startDate) %}
+      {% if selectedMonth %}
+      <tr class="data-row">
+        <td class="data-cell">{{ countRuns }}x</td>
+        <td class="data-cell">{{ selectedMonth.distance }}</td>
+        <td class="data-cell">{{ selectedMonth.pace }}</td>
+        <td class="data-cell">{{ selectedMonth.avghr }}</td>
+        <td class="data-cell hidden-stuff">{{ selectedMonth.ascent }}</td>
+        <td class="data-cell hidden-stuff">{{ selectedMonth.duration }}</td>
+      </tr>
+      {% endif %}
+    </tbody>
+  </table>

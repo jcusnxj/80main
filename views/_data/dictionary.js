@@ -6,7 +6,8 @@ export default {
       distance: 'Distance',
       pace: 'Pace',
       ascent: 'Ascent',
-      duration: 'Duration'
+      duration: 'Duration',
+      date: 'Date'
     },
     
     cs: {
@@ -16,6 +17,7 @@ export default {
       distance: 'Vzdálenost',
       pace: 'Tempo',
       ascent: 'Stoupání',
-      duration: 'Čas'
+      duration: 'Čas',
+      date: 'Datum'
     }
   };

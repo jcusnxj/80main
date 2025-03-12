@@ -31,6 +31,16 @@ export default function (eleventyConfig) {
         return DateTime.fromISO(dateObj).toFormat(format);
     });
 
+    // filter by range
+    eleventyConfig.addFilter("filterByDateRange", (data, startDate, endDate) =>
+        data.filter(r => r.date >= startDate && r.date <= endDate)
+    );
+
+    // find attribute
+    eleventyConfig.addFilter("findAttribute", (data, key, value) => 
+        data.find(item => item[key] === value)
+      );
+
     // LOCALIZED COLLECTIONS
     // english collection
     eleventyConfig.addCollection("all_en", function (collection) {
