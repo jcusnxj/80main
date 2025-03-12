@@ -1,8 +1,10 @@
 ---
-title: Domů
-layout: base
+title: weblog
+layout: logmain
 tags: page_cs
-translationKey: "homePage"
+translationKey: "runningLog"
+eleventyNavigation:
+  key: weblog
+  order: 2
 permalink: "/{{ lang }}/"
 ---
-Vítejte na mých osobních stránkách!

@@ -1,11 +1,11 @@
 export default {
     languages: [
       {
-        label: "EN",
+        label: "en",
         code: "en",
       },
       {
-        label: "CZ",
+        label: "cz",
         code: "cs",
       },
     ]

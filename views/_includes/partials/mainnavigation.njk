@@ -1,4 +1,7 @@
-{% set navPages = collections["page_" + lang] %}
+<!--
+<{% set navPages = collections["page_" + lang] | eleventyNavigation  %}
 {% for item in navPages %}
-<a href="{{ item.url }}">{{ item.data.title }}</a>
-{% endfor %}
+<a href="{{ item.url }}">{{ item.title }}</a>
+{% endfor %}>
+-->
+<div>{% include "partials/language-switcher.njk" %}</div>

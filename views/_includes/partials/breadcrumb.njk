@@ -1,0 +1,27 @@
+{% set navPages = collections["all_" + lang] | eleventyNavigationBreadcrumb(eleventyNavigation.key, { includeSelf: true }) %}
+
+{% for crumb in navPages %}
+{% if loop.first %}
+
+<nav class="breadcrumb">
+
+{% endif %}
+{% if not loop.last %}
+
+<a href="{{ crumb.url }}" class="crumb">{{ crumb.key }}</a>
+
+{% else %}
+{% if page.url == "/" + lang + "/" %}
+
+<div class="crumb-last">Fuck it, dude.</div>
+
+{% else %}
+
+<div class="crumb-last">{{ crumb.key }}</div>
+
+{% endif %}
+
+</nav>
+
+{% endif %}
+{% endfor %}

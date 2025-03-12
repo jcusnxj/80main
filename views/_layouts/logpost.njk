@@ -2,11 +2,19 @@
 
 {% block content %}
 
-<article class="log">
+<article>
+    
+    <section class="text">
+        {{ content | safe }}
+    </section>
 
-    {{ content | safe }}
-    {% include "partials/monthlyreport.njk" %}
-    {% include "partials/pagination.njk" %}
+    <section class="tablereport">
+        {% include "partials/monthlyreport.njk" %}
+    </section>
+
+    <section class="pagination">
+        {% include "partials/pagination.njk" %}
+    </section>
 
 </article>
 

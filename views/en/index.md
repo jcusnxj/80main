@@ -1,8 +1,10 @@
 ---
-title: Home
-layout: base
+title: weblog
+layout: logmain
 tags: page_en
-translationKey: "homePage"
+translationKey: "runningLog"
+eleventyNavigation:
+    key: weblog
+    order: 2
 permalink: "/{{ lang }}/"
 ---
-Welcome to my personal website!
