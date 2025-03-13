@@ -1,10 +1,10 @@
 ---
-title: weblog
+title: Log
 layout: logmain
 tags: page_en
 translationKey: "runningLog"
 eleventyNavigation:
-    key: weblog
+    key: Log
     order: 2
 permalink: "/{{ lang }}/"
 ---

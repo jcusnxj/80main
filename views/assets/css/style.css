@@ -83,7 +83,7 @@ a {
 .breadcrumb .wrapper {
     display: flex;
     justify-content: flex-start;
-    padding-bottom: 1rem;
+    padding-bottom: 0.5rem;
 }
 
 /* MAIN CONTENT */
@@ -138,7 +138,6 @@ footer .wrapper {
     justify-content: space-between;
     font-size: calc(var(--default-size) * var(--size-multiplier-smaller));
     font-weight: 500;
-    text-transform: uppercase;
     margin: 3rem 0;
 }
 
@@ -170,7 +169,8 @@ footer .wrapper {
     }
 
     .crumb,
-    .crumb-last {
+    .crumb-last,
+    .pagination {
         font-size: var(--default-size)
     }
 
