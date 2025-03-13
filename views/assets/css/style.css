@@ -20,8 +20,9 @@
     --link-color: #0995c4;
     --other-color: #8395a6;
     --headings-color: #60747d;
-    --default-size: 1.6rem;             /* default font size */
-    --size-multiplier-smaller: 0.85;    /* smaller font size */
+    --default-size: 1.6rem; /* default font size */
+    --size-multiplier-smaller: 0.85; /* smaller font size */
+    --size-multiplier-larger: 1.15; /* larger font size */
 }
 
 
@@ -52,7 +53,8 @@ a {
     margin-bottom: 1rem;
 }
 
-.text, .tablereport {
+.text,
+.tablereport {
     padding-bottom: 1rem;
 }
 
@@ -69,7 +71,8 @@ a {
     justify-content: flex-end;
     padding-top: 3rem;
     padding-bottom: 1rem;
-    
+    gap: 1rem;
+
 }
 
 .site-header .wrapper a {
@@ -110,12 +113,12 @@ footer .wrapper {
 }
 
 .header-row {
-    color: var(--headings-color);   
+    color: var(--headings-color);
 }
 
 .total-row {
     font-weight: 600;
-    color: var(--headings-color); 
+    color: var(--headings-color);
 }
 
 .unit-cell,
@@ -141,18 +144,18 @@ footer .wrapper {
 /* BREADCRUMB */
 .crumb,
 .crumb-last {
-display: inline;
-text-decoration: none;
-font-size: calc(var(--default-size) * var(--size-multiplier-smaller));
-} 
+    display: inline;
+    text-decoration: none;
+    font-size: calc(var(--default-size) * var(--size-multiplier-smaller));
+}
 
 .crumb-last {
-color: gray;
+    color: gray;
 }
 
 .crumb::after {
-content: " > ";
-color: gray;
+    content: " > ";
+    color: gray;
 }
 
 /* RESPONSIVE */
@@ -163,6 +166,15 @@ color: gray;
 
     .pagination {
         margin: 2rem 0;
+    }
+
+    .crumb,
+    .crumb-last {
+        font-size: var(--default-size)
+    }
+    .site-header .wrapper {
+        font-size: calc(var(--default-size) * var(--size-multiplier-larger));
+    
     }
 
 }
